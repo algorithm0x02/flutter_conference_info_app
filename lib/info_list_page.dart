@@ -21,7 +21,7 @@ class _ListPageState extends State<ListPage> {
         backgroundColor: Colors.blueGrey,
         title: Text('컨퍼런스 정보'),
       ),
-      body: _buildBody0(),
+      body: _buildBody1(),
     );
   }
 
@@ -37,7 +37,7 @@ class _ListPageState extends State<ListPage> {
 
 
 
-  Widget _buildBody0() {
+  Widget _buildBody1() {
 
     return ListView(
       children: _x.map((info) {
