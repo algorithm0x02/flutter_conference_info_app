@@ -15,16 +15,6 @@ class _ListPageState extends State<ListPage> {
   List<Conference> _x = [];
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _list();
-  }
-  Future<void> _list() async {
-    _x = await getlist();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -34,6 +24,14 @@ class _ListPageState extends State<ListPage> {
       body: _buildBody(),
     );
   }
+
+  @override
+  Future<void> initState() async {
+    // TODO: implement initState
+    super.initState();
+    _x = await getlist();
+  }
+
 
   Widget _buildBody() {
 

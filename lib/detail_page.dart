@@ -47,7 +47,7 @@ class DetailPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(info.start + '-' + info.end),
+                Text(info.start + '~~' + info.end),
               ],
             ),
             Padding(
