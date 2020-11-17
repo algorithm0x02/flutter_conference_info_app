@@ -21,19 +21,23 @@ class _ListPageState extends State<ListPage> {
         backgroundColor: Colors.blueGrey,
         title: Text('컨퍼런스 정보'),
       ),
-      body: _buildBody(),
+      body: _buildBody0(),
     );
   }
 
   @override
-  Future<void> initState() async {
+  void initState() {
     // TODO: implement initState
     super.initState();
+    _list();
+  }
+  Future<void> _list() async {
     _x = await getlist();
   }
 
 
-  Widget _buildBody() {
+
+  Widget _buildBody0() {
 
     return ListView(
       children: _x.map((info) {

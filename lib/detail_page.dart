@@ -1,6 +1,7 @@
 import 'package:conference_info_app/API/detail_info.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:intl/intl.dart';
 
 class DetailPage extends StatelessWidget {
   final Conference info;
@@ -47,7 +48,9 @@ class DetailPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(info.start + '~~' + info.end),
+                Text(DateFormat('EEEE, d MMM, yyyy').format(DateTime.parse(info.end))),
+                Text('~'),
+                Text(DateFormat('EEEE, d MMM, yyyy').format(DateTime.parse(info.start))),
               ],
             ),
             Padding(
